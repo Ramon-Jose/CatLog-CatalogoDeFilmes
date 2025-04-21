@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Detalhamento do Filme</title>
+</head>
+
+<body class="bg-black">
+    <header class="container-fluid p-1">
+        <div class="col-1">
+            <a href="index.html">
+                <h5 id="logo">CatLog</h5>
+            </a>
+        </div>
+        <div class="col-11">
+            <nav class="caixa-menu">
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="#">Lista de Filmes</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Favoritos</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <div id="detalhe" class="painel"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const todosOsFilmes = [ ...filmes, ...filmesAside, ...filmePrincipal];
+        const id = parseInt(params.get('id'));
+        const filme = todosOsFilmes.find(item => item.id == id);
+
+        const container = document.getElementById('detalhe');
+        if (filme) {
+            container.innerHTML = `
+                <div class = "container-fluid p-4">
+                    <div class="row">
+                        <div class = "col-7">
+                            <img class = "detalhe" src="${filme.imagem}" alt="${filme.filme}">
+                        </div>
+                        <div class = "col-5">
+                            <h2>${filme.filme}</h2>
+                            <p>${filme.descricao}</p>
+                            <p> Diretor: ${filme.diretor}</p>
+                            <p>Ano de Lançamento: ${filme.ano}</p>
+                            <div class = "botoes">
+                                <button id = "voltar"><a href="index.html">Voltar</a></button>
+                                <button id = "favoritar">Favoritar <i class="bi bi-star"></i></button>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+                `;
+        }
+        else {
+            container.innerHTML = `
+                <h4> Filme não encontrado :/</h4>
+                `;
+        }
+    </script>
+</body>
+
+</html>

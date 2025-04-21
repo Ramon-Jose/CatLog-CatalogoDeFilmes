@@ -1,0 +1,285 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: white;
+}
+
+img {
+    border-radius: 5px;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header h5 {
+    font-style: oblique;
+    font-weight: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.8rem;
+}
+
+#logo {
+    font-style: oblique;
+    font-weight: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    position: left;
+    padding: .1rem;
+    margin: .1rem;
+}
+
+.caixa-menu li {
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+.caixa-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.caixa-menu a:hover {
+    background-color: #413f3f;
+    border-radius: 5px;
+}
+
+nav form input {
+    border-radius: 10rem;
+    padding: 0 .5rem;
+    color: black;
+    background-color: whitesmoke;
+}
+
+.bombando {
+    border: solid 1.5px whitesmoke;
+    border-radius: 5px;
+}
+
+.central {
+    border: solid 1.5px whitesmoke;
+}
+
+main {
+    margin-bottom: 1rem;
+}
+
+main div h6:first-of-type {
+    padding: .5rem;
+    margin: .5rem;
+}
+
+main div aside h6 {
+    text-align: center;
+}
+
+main div aside div img {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+main div {
+    background-color: black;
+    border-radius: 10px;
+}
+
+section {
+    margin: 1.2rem 0;
+    text-align: center;
+}
+
+section div img {
+    width: 99%;
+    height: 99%;
+    display: block;
+}
+
+main h6 {
+    text-align: start;
+    display: block;
+    margin: 1rem 0 .2rem .2rem;
+}
+
+main p {
+    text-align: justify;
+}
+
+.card-title {
+    color: white;
+    font-weight: bolder;
+    font-style: initial;
+}
+
+.card-text {
+    font-size: .9rem;
+}
+
+.imgCarrosel {
+    height: 650px;
+}
+
+.fundoCarrosel {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+footer span {
+    font-weight: bolder;
+}
+
+footer h5 {
+    text-align: start;
+}
+
+footer p {
+    text-align: justify;
+    margin: .2rem 0.2rem;
+}
+
+.sobre {
+    border: solid 1.5px whitesmoke;
+    border-radius: 5px;
+    padding: 1.2rem;
+    text-align: center;
+    float:left;
+}
+
+.autor {
+    border: solid 1.5px whitesmoke;
+    border-radius: 5px;
+    padding: 1.2rem;
+    margin: 0 auto;
+}
+
+.perfil {
+    font-size: 4rem;
+    display: block;
+    float: left;
+}
+
+.dados {
+    margin-left: 5rem;
+}
+
+h5 i {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.redes {
+    clear: both;
+}
+
+button {
+    background-color: black;
+    border: solid 1px whitesmoke;
+    padding: .2rem;
+}
+
+button a {
+    padding: .1rem;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.botoes #favoritar:hover {
+    background-color: #b39c1f;
+}
+
+.botoes :hover {
+    background-color: #413f3f;
+}
+
+.botoes button {
+    margin-right: 1rem;
+}
+
+.detalhe {
+    width: 900px;
+    height: 600px;
+}
+
+/*CSS Flexbox*/
+
+.flex {
+    display: flex;
+    margin: 0 auto;
+}
+
+.flex > div {
+    flex: 1 1;
+}
+
+@media screen and (max-width:1135px) {
+    main {
+        display: block;
+        clear: both;
+    }
+    
+    .central {
+        display: block;
+        clear: both;
+    }
+
+    aside {
+        clear: both;
+        display: block;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    #imgAside {
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+        height: 20%;
+        float: left;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width:750px) {
+    #imgAside {
+        width: 30%;
+        height: 30%;
+        float: left;
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width:478px) {
+    #imgAside {
+        width: 60%;
+        height: 60%;
+        float: left;
+        margin-left: 5rem;
+    }
+}
+
